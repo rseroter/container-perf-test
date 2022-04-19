@@ -14,7 +14,7 @@
 	<name>spring-restapi</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -39,6 +39,20 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.2.1</version>
+				<configuration>
+					<from>
+						<image>gcr.io/distroless/java17-debian11</image>
+					</from>
+					<to>
+						<image>gcr.io/seroter-project-base/spring-restapi</image>
+					</to>
+
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
